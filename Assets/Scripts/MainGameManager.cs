@@ -4,10 +4,11 @@ using System.Collections;
 public class MainGameManager : MonoBehaviour {
 
 	public static MainGameManager instance;
-	public int score;
-	public float timeRemaining = 60;
-	public IEnumerator countdown;
-	public bool isCountingDown;
+	private int score;
+	private ArrayList peeledPotatoes = new ArrayList();
+	private float timeRemaining = 60;
+	private IEnumerator countdown;
+	private bool isCountingDown;
 
 	void Awake(){
 
