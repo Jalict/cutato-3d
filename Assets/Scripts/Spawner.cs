@@ -15,18 +15,9 @@ public class Spawner : MonoBehaviour
 	//Counting number of potatos
 	int numberOfPeeled = 5;
 
-<<<<<<< HEAD
 	void Start()
 	{
 	}
-=======
-public GameObject [] models;
-
-	// Use this for initialization
-	void Start () {
-		transform.Translate (-5f * Time.deltaTime, 0f, 0f);
-		GetComponent<Rigidbody>().AddForce(acceleration, 0f, 0f, ForceMode.Acceleration);
->>>>>>> add3460cdfee7933a4814285f13e9b3ab0c02b6c
 
 	void Update()
 	{
@@ -43,17 +34,10 @@ public GameObject [] models;
 		countNum++;
 		}
 	}
-<<<<<<< HEAD
 	void OnCollisionEnter(Collision other)
 	{
 	if(other.gameObject.tag == "Bucket"){ //If collision between this gameObject and the bucket
 		}
-=======
-
-	// Update is called once per frame
-	void Update () {
-	
->>>>>>> add3460cdfee7933a4814285f13e9b3ab0c02b6c
 	}
 	void OnGUI()
 	{
