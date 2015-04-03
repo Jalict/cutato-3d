@@ -596,8 +596,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01e2a8fd13bd1ef44be3704f2d604ca5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PeelingLocation: {x: 0, y: 0, z: 3}
-  PeelingRadius: 1
+  peelSound: {fileID: 8300000, guid: 81e500315f53a5d4e9fd4540ae21086d, type: 3}
+  PeelingLocation: {x: 0, y: 0, z: 0}
+  PeelingRadius: 0
 --- !u!1 &1345225851
 GameObject:
   m_ObjectHideFlags: 0

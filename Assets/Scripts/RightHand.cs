@@ -2,6 +2,9 @@
 using System.Collections; 
 
 public class RightHand : MonoBehaviour {
+	//sound initializing
+	public AudioClip peelSound;
+	//old
 	public Vector3 PeelingLocation;
 	public float PeelingRadius;
 	
@@ -12,8 +15,10 @@ public class RightHand : MonoBehaviour {
 	void Update () {
 		MoveHand ();
 
-		if (Input.GetKey (KeyCode.Mouse0)) 
+		if (Input.GetKey (KeyCode.Mouse0))
 			PeelPeelables ();
+		if(Input.GetKeyDown (KeyCode.Mouse0))
+			AudioSource.PlayClipAtPoint(peelSound, this.transform.position);
 	}
 
 	void PeelPeelables ()
