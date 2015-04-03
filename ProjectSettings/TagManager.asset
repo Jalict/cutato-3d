@@ -3,21 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-<<<<<<< HEAD
-  - Bucket
-  - Potatos
-  - New Tag
-=======
-  - Peelable
->>>>>>> b6c99ab16f13f15593ba7a0fd763e0050ae05f00
+  tags: []
   layers:
-  - Default
-  - TransparentFX
-  - Ignore Raycast
-  - 
-  - Water
-  - UI
   - 
   - 
   - 
@@ -44,7 +31,10 @@ TagManager:
   - 
   - 
   - 
-  m_SortingLayers:
-  - name: Default
-    uniqueID: 0
-    locked: 0
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers: []
