@@ -2,8 +2,8 @@
 using System.Collections; 
 
 public class RightHand : MonoBehaviour {
-	private Vector3 PeelingLocation;
-	private float PeelingRadius;
+	public Vector3 PeelingLocation;
+	public float PeelingRadius;
 	
 	void Start () {
 		Cursor.lockState = CursorLockMode.Locked;
