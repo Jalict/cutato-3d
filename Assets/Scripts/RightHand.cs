@@ -2,15 +2,13 @@
 using System.Collections; 
 
 public class RightHand : MonoBehaviour {
-	public Vector3 PeelingLocation;
-	public float PeelingRadius;
-
-	// Use this for initialization
+	private Vector3 PeelingLocation;
+	private float PeelingRadius;
+	
 	void Start () {
 		Cursor.lockState = CursorLockMode.Locked;
 	}
-	
-	// Update is called once per frame
+
 	void Update () {
 		MoveHand ();
 
@@ -22,11 +20,11 @@ public class RightHand : MonoBehaviour {
 	{
 		Collider[] collidedObjects = Physics.OverlapSphere (PeelingLocation + transform.position, PeelingRadius);
 
-
 		foreach (Collider obj in collidedObjects) {
 			if(obj.CompareTag("Peelable")) {
+				//TODO Reduce peeling factor
+				//TODO Change texture (?)
 				obj.GetComponent<Renderer>().material.SetColor("_Color", Color.red);
-	
 			}
 		}
 	}
@@ -37,6 +35,7 @@ public class RightHand : MonoBehaviour {
 		Vector3 currentPos = transform.position;
 		currentPos.x += mouseMovement.y * Time.deltaTime * 50;
 		currentPos.z += mouseMovement.x * Time.deltaTime * 50;
+		currentPos.y += Input.GetAxis("Mouse ScrollWheel") * Time.deltaTime * 100;
 
 		transform.position = currentPos;
 	}
