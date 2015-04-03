@@ -11,7 +11,7 @@ GameObject:
   - 33: {fileID: 3368934}
   - 65: {fileID: 6562708}
   - 23: {fileID: 2310962}
-  - 114: {fileID: 11491878}
+  - 54: {fileID: 5452048}
   m_Layer: 0
   m_Name: Potato
   m_TagString: Untagged
@@ -62,6 +62,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 170386}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &5452048
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 170386}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 90
+  m_CollisionDetection: 0
 --- !u!65 &6562708
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -74,21 +89,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &11491878
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 170386}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1d79919d8e07264ea0945acfb9fdab8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  model: []
-  startPosition: {x: 0, y: 50, z: 0}
-  y: 0
-  countSpeed: 5
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

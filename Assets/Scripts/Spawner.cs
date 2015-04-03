@@ -5,45 +5,41 @@ public class Spawner : MonoBehaviour
 {
 	//GUI
 	public Font newFont;
+	public int fontSize;
 	//Create array with Potato objects.
 	public GameObject [] model;
-	//Start position of Patato
-	public Vector3 startPosition;
+	//
+	public GameObject potato;
 	//Timer
-	public int countSpeed = 5;
+	public int countSpeed = 100; //amount of time between spawns
 	int countNum = 0;
 	//Counting number of potatos
 	int numberOfPeeled = 5;
-
-	void Start()
-	{
-	}
+	//showing highscore
+	int count = 0;
 
 	void Update()
 	{
-		if (countNum > countSpeed) {
-			for (int i= 0; i<numberOfPeeled; i++) {
-				//Transform.Translate(0f,0f,0f); 
-			//for (int i= 0; i<model[]; i++) {
-				//Transform o = (Transform)Instantiate (prefab);
-				//o.transform.Translate (Random.Range (-5, 5), Random.Range (-1,1), 0f); //Spawning at random x-axis location
-				//startPosition= (0f,0f,0f).transform.position;
-			//}
-				countNum = 0;	
+		if (numberOfPeeled >0){
+			if (countNum > countSpeed) {
+				Instantiate(potato, new Vector3(0, 10, 0), Quaternion.identity);
+				numberOfPeeled = numberOfPeeled-1;
+				countNum = 0;
+				count = count+1;
 			}
+		}
 		countNum++;
-		}
-	}
-	void OnCollisionEnter(Collision other)
-	{
-	if(other.gameObject.tag == "Bucket"){ //If collision between this gameObject and the bucket
-		}
 	}
 	void OnGUI()
 	{
 		GUIStyle nStyle = new GUIStyle ();
 		nStyle.font = newFont;
-		GUI.TextField (new Rect (10, 50, 200, 200), "HIGHSCORE", nStyle);
-		GUI.TextField (new Rect (10, 100, 200, 200), "Number of potato peeled: " + numberOfPeeled, nStyle);
+		//nStyle.fontSize = 30;
+		nStyle.normal.textColor = new Color(100,100,100);
+		//GUI.TextField (new Rect (10, 50, 200, 200), "HIGHSCORE", nStyle);
+		nStyle.fontSize = 18;
+		GUI.TextField (new Rect (Screen.width/2-50, 10, 200, 200), "Peeled potato : ", nStyle);
+		nStyle.fontSize = 200;
+		GUI.TextField (new Rect (Screen.width/2-50, 320, 200, 200), "" + count, nStyle);
 	}	
 }
