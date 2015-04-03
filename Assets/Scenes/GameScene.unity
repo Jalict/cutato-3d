@@ -256,6 +256,7 @@ GameObject:
   - 65: {fileID: 1162884026}
   - 23: {fileID: 1162884025}
   - 114: {fileID: 1162884029}
+  - 54: {fileID: 1162884030}
   m_Layer: 0
   m_Name: RightHand
   m_TagString: Untagged
@@ -315,7 +316,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -3.69000006}
   m_LocalScale: {x: 2, y: 1, z: 5}
-  m_Children: []
+  m_Children:
+  - {fileID: 1957890236}
   m_Father: {fileID: 0}
   m_RootOrder: 3
 --- !u!114 &1162884029
@@ -329,6 +331,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01e2a8fd13bd1ef44be3704f2d604ca5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PeelingCollider: {fileID: 1957890234}
+--- !u!54 &1162884030
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1162884024}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1954761160
 GameObject:
   m_ObjectHideFlags: 0
@@ -389,3 +407,43 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!1 &1957890234
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1957890236}
+  - 65: {fileID: 1957890235}
+  m_Layer: 0
+  m_Name: PeelingCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1957890235
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1957890234}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &1957890236
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1957890234}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: .584000051}
+  m_LocalScale: {x: .5, y: 1, z: .200000003}
+  m_Children: []
+  m_Father: {fileID: 1162884028}
+  m_RootOrder: 0
