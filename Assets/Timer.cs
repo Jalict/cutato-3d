@@ -2,8 +2,7 @@
 using System.Collections;
 
 public class Timer : MonoBehaviour {
-}
- /*
+ 
  public float timeRemaining = 60f;
  
  void Start()
@@ -33,4 +32,3 @@ public class Timer : MonoBehaviour {
  //may not be needed, left it in there
  void timeElapsed()
  {}
- 	*/

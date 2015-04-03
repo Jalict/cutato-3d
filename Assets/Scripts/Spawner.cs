@@ -3,9 +3,14 @@ using System.Collections;
 
 public class Spawner : MonoBehaviour {
 
-public gameObject [] models;
+public GameObject [] model;
+//public Vector3 startPosition;
+
 	// Use this for initialization
 	void Start () {
+		transform.Translate (-5f * Time.deltaTime, 0f, 0f);
+		rigidbody.AddForce(acceleration, 0f, 0f, ForceMode.Acceleration);
+
 	
 	}
 	
