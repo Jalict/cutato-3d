@@ -51,20 +51,5 @@ public class MainGameManager : MonoBehaviour {
 		}
 		Debug.Log ("Time's up!");
 		Application.LoadLevel (0);
-	}
-<<<<<<< HEAD
-	void OnGUI()
-	{
-		GUIStyle nStyle = new GUIStyle ();
-		nStyle.font = newFont;
-		nStyle.normal.textColor = new Color(100,100,100);
-		//Display time countdown
-		nStyle.fontSize = 100;
-		GUI.TextField (new Rect (Screen.width/2-50, 320, 200, 200), "" + timeRemaining, nStyle);
-		//Display score
-		//nStyle.fontSize = 50;
-		//GUI.TextField (new Rect (Screen.width/4, 50, 200, 200), "Peeled potatoes: " + score, nStyle);
 	}	
-=======
->>>>>>> 434eb56702fe439b0eafacdd33fb11e214be95ba
 }

@@ -332,7 +332,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d99f11751621de4e99ab1c91eb7398f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newFont: {fileID: 0}
+  score: 0
+  timeRemaining: 600
 --- !u!4 &669235569
 Transform:
   m_ObjectHideFlags: 0
