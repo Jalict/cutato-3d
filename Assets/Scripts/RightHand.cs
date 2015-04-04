@@ -4,7 +4,6 @@ using System.Collections;
 public class RightHand : MonoBehaviour {
 	//sound initializing
 	public AudioClip peelSound;
-    public ParticleSystem peelingEffect;
 	public Vector3 PeelingLocation;
 	public float PeelingRadius;
 
