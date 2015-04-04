@@ -12,18 +12,17 @@ public class BucketList : MonoBehaviour {
 	}
 	
 	void Update () {
-		PeelPeelables2 ();
+		CheckPeelablesInside ();
 	}
 
-	void PeelPeelables2 ()
+	void CheckPeelablesInside ()
 	{
 		Collider[] collidedObjects = Physics.OverlapSphere (PeelingLocation + transform.position, PeelingRadius);
 
 		foreach (Collider obj in collidedObjects) {
 			
 			if(obj.CompareTag("Peelable")) {
-				potatoesInBasket.Add(obj);
-				Debug.Log(potatoesInBasket.Count);
+                MainGameManager.instance.peeledPotatoes.Add(obj);
 				obj.tag = "Untagged";
 			}
 		}
