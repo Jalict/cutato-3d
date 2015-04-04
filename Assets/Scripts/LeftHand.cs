@@ -17,6 +17,7 @@ public class LeftHand : MonoBehaviour {
 			if (grabbedObject == null) {
 				GrabObject ();
 			} else {
+                grabbedObject.GetComponent<Rigidbody>().isKinematic = false;
 				grabbedObject = null;
 			}
 		}
@@ -24,13 +25,14 @@ public class LeftHand : MonoBehaviour {
 			//TODO Make such that the object doesn't rotate all over the place
 			//TODO Make such that objects gabbing position is also specified
 			grabbedObject.transform.position = grabbingLocation + transform.position;
+            grabbedObject.GetComponent<Rigidbody>().isKinematic = true;
 		} 
 	}
 	
 	void GrabObject() {
 		Collider[] collidedObjects = Physics.OverlapSphere (grabbingLocation + transform.position, grabbingRadius);
 
-		int bestIndex = -1;
+		int bestIndex = -1; //IT WORKS, OKEY?! Don't judge me :(
 		float bestDist = float.MaxValue;
 
 		for (int i = 0; i < collidedObjects.Length; i++) {
