@@ -9,20 +9,19 @@ public class Clock : MonoBehaviour {
     float second = 0;
 
     //Timer
-	public int countSpeed = 50; //amount of time between spawns
+	public int countSpeed = 50; //amount of time between clicks
 	private int countNum = 0;
 	
 	void Update () {
 		if(countNum > countSpeed){
- 		second+=1.0f;
- 		countNum = 0;	
-   }
-   if (second>=60)
-       		{
-        		   second = 0;
-       		    timer = 0;
-      		 }
-   countNum++;
+ 			second+=1.0f;
+ 			countNum = 0;	
+   		}
+   		if (second>=60){
+     		second = 0;
+       		timer = 0;
+    	}
+   		countNum++;
 		float secondAngle = -360 * (second/60);		
 		SecondHand.localRotation = Quaternion.Euler(0,0, secondAngle);
 	}
