@@ -5,6 +5,7 @@ public class AdjustScore : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		/*
 	
 		if (Input.GetKeyDown (KeyCode.UpArrow))
 			MainGameManager.instance.AdjustScore (1);
@@ -17,5 +18,6 @@ public class AdjustScore : MonoBehaviour {
 
 		if (Input.GetKeyDown (KeyCode.D))
 			MainGameManager.instance.StopTimer ();
+			*/
 	}
 }
