@@ -12,7 +12,7 @@ public class MainGameManager : MonoBehaviour {
 
 	//GUI
 	public Font newFont;
-	public int fontSize;
+	private int fontSize;
 
 	void Awake(){
 		/*
