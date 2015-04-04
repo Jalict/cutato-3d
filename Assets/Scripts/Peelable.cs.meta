@@ -1,12 +1,16 @@
 fileFormatVersion: 2
 guid: 4095da212815abd4fb64f3a24563e2f8
-timeCreated: 1428147914
+timeCreated: 1428168973
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
   defaultReferences:
-  - newFont: {instanceID: 0}
-  - Tex0: {fileID: 2800000, guid: df1b8b911f0e8994b83b82c372446db6, type: 3}
+  - collisionSound: {fileID: 8300000, guid: 74c59cd1bbe72f54bab72834aa8a3705, type: 3}
+  - Tex0: {fileID: 2800000, guid: 37adfc9ba974d1b4d960d4824c705a92, type: 3}
+  - Tex1: {fileID: 2800000, guid: 4ddf5e4ad3890124385128b292bde08e, type: 3}
+  - Tex2: {fileID: 2800000, guid: 1b9e296d252993c47980d6742f7fe0a5, type: 3}
+  - Tex3: {fileID: 2800000, guid: aeac6111cc2724d4e941c7709a6a93a8, type: 3}
+  - Tex4: {fileID: 2800000, guid: 66a78de38de2e9642b768c87cf2d5b60, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

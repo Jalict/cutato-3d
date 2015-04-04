@@ -4,21 +4,24 @@ using System.Collections;
 public class RightHand : MonoBehaviour {
 	//sound initializing
 	public AudioClip peelSound;
-
+    public ParticleSystem peelingEffect;
 	public Vector3 PeelingLocation;
 	public float PeelingRadius;
-	
+
+    private bool isPeeling;
+
 	void Start () {
 		Cursor.lockState = CursorLockMode.Locked;
+
+        isPeeling = false;
 	}
 
 	void Update () {
 		MoveHand ();
 
-		if (Input.GetKey (KeyCode.Mouse0))
+        if (Input.GetKey(KeyCode.Mouse0) && isPeeling) { 
 			PeelPeelables ();
-		if(Input.GetKeyDown (KeyCode.Mouse0))
-			AudioSource.PlayClipAtPoint(peelSound, this.transform.position);
+        }
 	}
 
 	void PeelPeelables ()
@@ -27,19 +30,14 @@ public class RightHand : MonoBehaviour {
 
 		foreach (Collider obj in collidedObjects) {
 			if(obj.CompareTag("Peelable")) {
-				//TODO Reduce peeling factor
-				//TODO Change texture (?)
-				obj.GetComponent<Renderer>().material.SetColor("_Color", Color.red);
-	
-				if(Input.GetKeyDown (KeyCode.Mouse0)){
-					obj.GetComponent<Peelable>().peeling();
-				}
-			}
+				obj.GetComponent<Peelable>().Peel();
+                AudioSource.PlayClipAtPoint(peelSound, obj.transform.position);
+            }
 		}
 	}
 
 	void MoveHand() {
-		Vector3 mouseMovement = new Vector3(Input.GetAxis("Mouse Y"), Input.GetAxis("Mouse X"), 0f);
+		Vector2 mouseMovement = new Vector2(Input.GetAxis("Mouse Y"), Input.GetAxis("Mouse X"));
 
 		Vector3 currentPos = transform.position;
 		currentPos.x += mouseMovement.y * Time.deltaTime * 50;
@@ -47,6 +45,11 @@ public class RightHand : MonoBehaviour {
 		currentPos.y += Input.GetAxis("Mouse ScrollWheel") * Time.deltaTime * 100;
 
 		transform.position = currentPos;
+
+        if (mouseMovement.sqrMagnitude > 0.5f)
+            isPeeling = true;
+        else
+            isPeeling = false;
 	}
 
 	void OnDrawGizmos() {
