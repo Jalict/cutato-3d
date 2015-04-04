@@ -99,6 +99,7 @@ GameObject:
   - 23: {fileID: 49788873}
   - 33: {fileID: 49788872}
   - 54: {fileID: 49788876}
+  - 114: {fileID: 49788877}
   m_Layer: 0
   m_Name: Cube 2
   m_TagString: Peelable
@@ -176,6 +177,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &49788877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 49788871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4095da212815abd4fb64f3a24563e2f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newFont: {fileID: 0}
+  fontSize: 0
+  amountOfPeel: 0
+  isPeeled: 0
 --- !u!1 &380531487
 GameObject:
   m_ObjectHideFlags: 0
@@ -188,6 +204,7 @@ GameObject:
   - 23: {fileID: 380531489}
   - 33: {fileID: 380531488}
   - 54: {fileID: 380531492}
+  - 114: {fileID: 380531493}
   m_Layer: 0
   m_Name: Cube 3
   m_TagString: Peelable
@@ -265,6 +282,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &380531493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 380531487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4095da212815abd4fb64f3a24563e2f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newFont: {fileID: 0}
+  fontSize: 0
+  amountOfPeel: 0
+  isPeeled: 0
 --- !u!1 &432829350
 GameObject:
   m_ObjectHideFlags: 0
@@ -277,6 +309,7 @@ GameObject:
   - 23: {fileID: 432829351}
   - 33: {fileID: 432829353}
   - 54: {fileID: 432829355}
+  - 114: {fileID: 432829356}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Peelable
@@ -354,6 +387,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &432829356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 432829350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4095da212815abd4fb64f3a24563e2f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newFont: {fileID: 0}
+  fontSize: 0
+  amountOfPeel: 0
+  isPeeled: 0
 --- !u!1 &669235567
 GameObject:
   m_ObjectHideFlags: 0
@@ -638,8 +686,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   peelSound: {fileID: 8300000, guid: 81e500315f53a5d4e9fd4540ae21086d, type: 3}
-  PeelingLocation: {x: 0, y: 0, z: 0}
-  PeelingRadius: 0
+  PeelingLocation: {x: 0, y: 0, z: 2}
+  PeelingRadius: 1
 --- !u!1 &1345225851
 GameObject:
   m_ObjectHideFlags: 0
@@ -652,6 +700,7 @@ GameObject:
   - 23: {fileID: 1345225853}
   - 33: {fileID: 1345225852}
   - 54: {fileID: 1345225856}
+  - 114: {fileID: 1345225857}
   m_Layer: 0
   m_Name: Cube 1
   m_TagString: Peelable
@@ -729,6 +778,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1345225857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1345225851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4095da212815abd4fb64f3a24563e2f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newFont: {fileID: 0}
+  fontSize: 0
+  amountOfPeel: 0
+  isPeeled: 0
 --- !u!1 &1954761160
 GameObject:
   m_ObjectHideFlags: 0

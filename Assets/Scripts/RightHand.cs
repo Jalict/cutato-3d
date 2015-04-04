@@ -4,7 +4,7 @@ using System.Collections;
 public class RightHand : MonoBehaviour {
 	//sound initializing
 	public AudioClip peelSound;
-	//old
+
 	public Vector3 PeelingLocation;
 	public float PeelingRadius;
 	
@@ -30,6 +30,10 @@ public class RightHand : MonoBehaviour {
 				//TODO Reduce peeling factor
 				//TODO Change texture (?)
 				obj.GetComponent<Renderer>().material.SetColor("_Color", Color.red);
+	
+				if(Input.GetKeyDown (KeyCode.Mouse0)){
+					obj.GetComponent<Peelable>().peeling();
+				}
 			}
 		}
 	}
