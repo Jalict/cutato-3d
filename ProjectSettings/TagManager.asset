@@ -5,7 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Potato
-  - New Tag
+  - Pot
+  - Potatos
+  - Bucket
+  - Peelable
   layers:
   - Default
   - TransparentFX
