@@ -47,8 +47,6 @@ public class MainGameManager : MonoBehaviour {
 
 		while (timeRemaining > 0) {
 			timeRemaining = timeRemaining - Time.fixedDeltaTime;
-			Debug.Log("Time remaining: " + timeRemaining);
-			//Debug.Log("Time remaining: " + timeRemaining);
 			yield return new WaitForFixedUpdate();
 		}
 		if(timeout != null)
