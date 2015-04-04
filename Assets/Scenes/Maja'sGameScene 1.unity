@@ -261,14 +261,58 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4095da212815abd4fb64f3a24563e2f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newFont: {fileID: 0}
-  amountOfPeel: 0
-  isPeeled: 0
+  amountOfSkinLeft: 0
   Tex0: {fileID: 2800000, guid: 37adfc9ba974d1b4d960d4824c705a92, type: 3}
   Tex1: {fileID: 2800000, guid: 4ddf5e4ad3890124385128b292bde08e, type: 3}
   Tex2: {fileID: 2800000, guid: 1b9e296d252993c47980d6742f7fe0a5, type: 3}
   Tex3: {fileID: 2800000, guid: aeac6111cc2724d4e941c7709a6a93a8, type: 3}
   Tex4: {fileID: 2800000, guid: 66a78de38de2e9642b768c87cf2d5b60, type: 3}
+--- !u!1001 &529287496
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 464782, guid: dd378e8800e204748ae5c1c20d69e44b, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 464782, guid: dd378e8800e204748ae5c1c20d69e44b, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 464782, guid: dd378e8800e204748ae5c1c20d69e44b, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 11.1199999
+      objectReference: {fileID: 0}
+    - target: {fileID: 464782, guid: dd378e8800e204748ae5c1c20d69e44b, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 464782, guid: dd378e8800e204748ae5c1c20d69e44b, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 464782, guid: dd378e8800e204748ae5c1c20d69e44b, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 464782, guid: dd378e8800e204748ae5c1c20d69e44b, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 464782, guid: dd378e8800e204748ae5c1c20d69e44b, type: 2}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 130422, guid: dd378e8800e204748ae5c1c20d69e44b, type: 2}
+      propertyPath: m_Name
+      value: Bucket
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: dd378e8800e204748ae5c1c20d69e44b, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &592362004
 GameObject:
   m_ObjectHideFlags: 0
@@ -300,9 +344,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4095da212815abd4fb64f3a24563e2f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newFont: {fileID: 0}
-  amountOfPeel: 0
-  isPeeled: 0
+  amountOfSkinLeft: 0
   Tex0: {fileID: 2800000, guid: 37adfc9ba974d1b4d960d4824c705a92, type: 3}
   Tex1: {fileID: 2800000, guid: 4ddf5e4ad3890124385128b292bde08e, type: 3}
   Tex2: {fileID: 2800000, guid: 1b9e296d252993c47980d6742f7fe0a5, type: 3}
@@ -673,93 +715,6 @@ Transform:
   - {fileID: 2042908908}
   m_Father: {fileID: 0}
   m_RootOrder: 10
---- !u!1 &1007049185
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1007049189}
-  - 33: {fileID: 1007049188}
-  - 23: {fileID: 1007049187}
-  - 65: {fileID: 1007049186}
-  - 114: {fileID: 1007049190}
-  m_Layer: 0
-  m_Name: Bucket
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!65 &1007049186
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1007049185}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.00000012, y: 2, z: 1.00000024}
-  m_Center: {x: 5.96046448e-08, y: 0, z: -8.94069672e-08}
---- !u!23 &1007049187
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1007049185}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
-  m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
---- !u!33 &1007049188
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1007049185}
-  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1007049189
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1007049185}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.5, y: .100000001, z: 11.1199999}
-  m_LocalScale: {x: 4, y: 3, z: 4}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
---- !u!114 &1007049190
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1007049185}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fe5fc80955e44b4bb52ae7432e69205, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PeelingLocation: {x: 0, y: 4, z: 0}
-  PeelingRadius: 3
 --- !u!1 &1044781379
 GameObject:
   m_ObjectHideFlags: 0
@@ -919,6 +874,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   peelSound: {fileID: 8300000, guid: 81e500315f53a5d4e9fd4540ae21086d, type: 3}
+  peelingEffect: {fileID: 0}
   PeelingLocation: {x: 0, y: 0, z: 2}
   PeelingRadius: 1
 --- !u!1 &1405452173
@@ -1012,9 +968,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4095da212815abd4fb64f3a24563e2f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newFont: {fileID: 0}
-  amountOfPeel: 0
-  isPeeled: 0
+  amountOfSkinLeft: 0
   Tex0: {fileID: 2800000, guid: 37adfc9ba974d1b4d960d4824c705a92, type: 3}
   Tex1: {fileID: 2800000, guid: 4ddf5e4ad3890124385128b292bde08e, type: 3}
   Tex2: {fileID: 2800000, guid: 1b9e296d252993c47980d6742f7fe0a5, type: 3}

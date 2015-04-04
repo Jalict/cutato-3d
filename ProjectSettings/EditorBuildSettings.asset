@@ -11,3 +11,5 @@ EditorBuildSettings:
     path: Assets/Scenes/GameScene.unity
   - enabled: 1
     path: Assets/Scenes/Maja'sGameScene 1.unity
+  - enabled: 1
+    path: Assets/Scenes/StartScene.unity
