@@ -6,7 +6,7 @@ public class MainGameManager : MonoBehaviour {
 	public static MainGameManager instance;
 	public int score;
 	public ArrayList peeledPotatoes = new ArrayList();
-	public float timeRemaining = 5; 
+	public float timeRemaining = 60; 
 	private IEnumerator countdown;
 	private bool isCountingDown;
 	public delegate void timeoutEvent();
@@ -47,9 +47,11 @@ public class MainGameManager : MonoBehaviour {
 
 		while (timeRemaining > 0) {
 			timeRemaining = timeRemaining - Time.fixedDeltaTime;
+			//Debug.Log("Time remaining: " + timeRemaining);
 			yield return new WaitForFixedUpdate();
 		}
 		if(timeout != null)
 			timeout ();
+		Debug.Log ("TIME'S UP!");
 	}	
 }
