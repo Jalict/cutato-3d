@@ -191,11 +191,11 @@ MonoBehaviour:
   newFont: {fileID: 0}
   amountOfPeel: 0
   isPeeled: 0
-  Tex0: {fileID: 2800000, guid: df1b8b911f0e8994b83b82c372446db6, type: 3}
-  Tex1: {fileID: 2800000, guid: ef493bb70c13f7d459c60af4e68c6906, type: 3}
-  Tex2: {fileID: 2800000, guid: 669c9c0e42d65ca4aa923a28dd00a2db, type: 3}
-  Tex3: {fileID: 2800000, guid: 8cdbc0c6f4809df4a8cda2ec7b7bf843, type: 3}
-  Tex4: {fileID: 2800000, guid: 1d8ed2ff7f1a7514d9e5f93aecada4c6, type: 3}
+  Tex0: {fileID: 2800000, guid: 37adfc9ba974d1b4d960d4824c705a92, type: 3}
+  Tex1: {fileID: 2800000, guid: 4ddf5e4ad3890124385128b292bde08e, type: 3}
+  Tex2: {fileID: 2800000, guid: 1b9e296d252993c47980d6742f7fe0a5, type: 3}
+  Tex3: {fileID: 2800000, guid: aeac6111cc2724d4e941c7709a6a93a8, type: 3}
+  Tex4: {fileID: 2800000, guid: 66a78de38de2e9642b768c87cf2d5b60, type: 3}
 --- !u!1 &669235567
 GameObject:
   m_ObjectHideFlags: 0

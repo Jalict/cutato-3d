@@ -47,7 +47,7 @@ public class Peelable : MonoBehaviour {
 			TexVisible = Tex2;
 		}
 		if (amountOfPeel == 80) {
-			TexVisible = Tex2;
+			TexVisible = Tex3;
 		}
 		if(amountOfPeel == 100){
 			TexVisible = Tex4;
