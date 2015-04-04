@@ -9,6 +9,8 @@ public class MainGameManager : MonoBehaviour {
 	public float timeRemaining = 5; 
 	private IEnumerator countdown;
 	private bool isCountingDown;
+	public delegate void timeoutEvent();
+	public static event timeoutEvent timeout;
 
 	void Awake(){
 		if(instance) {
@@ -49,7 +51,7 @@ public class MainGameManager : MonoBehaviour {
 			//Debug.Log("Time remaining: " + timeRemaining);
 			yield return new WaitForFixedUpdate();
 		}
-		Debug.Log ("Time's up!");
-		Application.LoadLevel (0);
+		if(timeout != null)
+			timeout ();
 	}	
 }
