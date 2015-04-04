@@ -72,7 +72,7 @@ public class MainGameManager : MonoBehaviour {
 		nStyle.fontSize = 100;
 		GUI.TextField (new Rect (Screen.width/2-50, 320, 200, 200), "" + timeRemaining, nStyle);
 		//Display score
-		nStyle.fontSize = 50;
-		GUI.TextField (new Rect (Screen.width/4, 50, 200, 200), "Peeled potatoes: " + score, nStyle);
+		//nStyle.fontSize = 50;
+		//GUI.TextField (new Rect (Screen.width/4, 50, 200, 200), "Peeled potatoes: " + score, nStyle);
 	}	
 }
