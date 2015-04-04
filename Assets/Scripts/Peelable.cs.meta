@@ -1,10 +1,12 @@
 fileFormatVersion: 2
 guid: 4095da212815abd4fb64f3a24563e2f8
-timeCreated: 1428139920
+timeCreated: 1428147914
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - newFont: {instanceID: 0}
+  - Tex0: {fileID: 2800000, guid: df1b8b911f0e8994b83b82c372446db6, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
