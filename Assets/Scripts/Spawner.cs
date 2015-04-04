@@ -5,25 +5,31 @@ public class Spawner : MonoBehaviour
 {
 	//GUI
 	public Font newFont;
-	public int fontSize;
+	private int fontSize;
 	//Create array with Potato objects.
 	public GameObject [] model;
 	//
 	public GameObject potato;
 	//Timer
 	public int countSpeed = 100; //amount of time between spawns
-	int countNum = 0;
+	private int countNum = 0;
 	//Counting number of potatos
-	int numberOfPeeled = 5;
-	//showing highscore
-	int count = 0;
+	private int numberOfFullyPeeled; //create data from numberOfPeeled since list only readable.
+	ArrayList numberOfPeeled; //storing data from GameManager.
+	//showing highscore/number of peeled potatos.
+	private int count = 0;
+
+	void Start() {
+		numberOfPeeled = MainGameManager.instance.peeledPotatoes;
+		numberOfFullyPeeled = numberOfPeeled.Count;
+ 	}
 
 	void Update()
 	{
-		if (numberOfPeeled >0){
+		if (numberOfFullyPeeled >0){
 			if (countNum > countSpeed) {
 				Instantiate(potato, new Vector3(0, 10, 0), Quaternion.identity);
-				numberOfPeeled = numberOfPeeled-1;
+				numberOfFullyPeeled = numberOfFullyPeeled-1;
 				countNum = 0;
 				count = count+1;
 			}
