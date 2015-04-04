@@ -4,36 +4,23 @@ using System.Collections;
 public class MainGameManager : MonoBehaviour {
 
 	public static MainGameManager instance;
-	private int score;
-	private ArrayList peeledPotatoes = new ArrayList();
-	private float timeRemaining = 600; 
+	public int score;
+	public ArrayList peeledPotatoes = new ArrayList();
+	public float timeRemaining = 5; 
 	private IEnumerator countdown;
 	private bool isCountingDown;
 
-	//GUI
-	public Font newFont;
-	private int fontSize;
-
 	void Awake(){
-		/*
 		if(instance) {
 			DestroyImmediate(gameObject);
 		} else {
-			DontDestroyOnLoad(gameObject);
 			instance = this;
+			DontDestroyOnLoad(gameObject);
 		}
-		*/
 		countdown = CountdownTime();
 		isCountingDown = false;
-		StartCoroutine("StartTimer");
-	}
-	void Update(){
-		
-		if (timeRemaining<=5){
-			//Change to highscoreScene
-			StopTimer();
-			Application.LoadLevel (0);
-		}
+
+		StartTimer ();
 	}
 
 	public void AdjustScore(int i){
@@ -58,11 +45,14 @@ public class MainGameManager : MonoBehaviour {
 
 		while (timeRemaining > 0) {
 			timeRemaining = timeRemaining - Time.fixedDeltaTime;
+			Debug.Log("Time remaining: " + timeRemaining);
 			//Debug.Log("Time remaining: " + timeRemaining);
 			yield return new WaitForFixedUpdate();
 		}
 		Debug.Log ("Time's up!");
+		Application.LoadLevel (0);
 	}
+<<<<<<< HEAD
 	void OnGUI()
 	{
 		GUIStyle nStyle = new GUIStyle ();
@@ -75,4 +65,6 @@ public class MainGameManager : MonoBehaviour {
 		//nStyle.fontSize = 50;
 		//GUI.TextField (new Rect (Screen.width/4, 50, 200, 200), "Peeled potatoes: " + score, nStyle);
 	}	
+=======
+>>>>>>> 434eb56702fe439b0eafacdd33fb11e214be95ba
 }
