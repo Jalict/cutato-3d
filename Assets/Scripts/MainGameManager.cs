@@ -51,5 +51,5 @@ public class MainGameManager : MonoBehaviour {
 		}
 		Debug.Log ("Time's up!");
 		Application.LoadLevel (0);
-	}
+	}	
 }
