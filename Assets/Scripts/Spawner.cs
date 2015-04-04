@@ -3,30 +3,21 @@ using System.Collections;
 
 public class Spawner : MonoBehaviour 
 {
-	//GUI
-	public Font newFont;
-	private int fontSize;
-	//Create array with Potato objects.
-	public GameObject [] model;
-	//
-	public GameObject potato;
-	//Timer
-	public int countSpeed = 100; //amount of time between spawns
-	private int countNum = 0;
-	//Counting number of potatos
-	private int numberOfFullyPeeled; //create data from numberOfPeeled since list only readable.
-	ArrayList numberOfPeeled; //storing data from GameManager.
+    public Font newFont;
+
+	ArrayList peeled; //storing data from GameManager.
 	//showing highscore/number of peeled potatos.
 	private int count = 0;
 
 	void Start() {
-		numberOfPeeled = MainGameManager.instance.peeledPotatoes;
-		numberOfFullyPeeled = numberOfPeeled.Count;
+		peeled = MainGameManager.instance.peeledPotatoes;
+
+        StartCoroutine("SpawnPotatoes");
  	}
 
 	void Update()
 	{
-		if (numberOfFullyPeeled >0){
+		/*if (numberOfFullyPeeled >0){
 			if (countNum > countSpeed) {
 				Instantiate(potato, new Vector3(0, 10, 0), Quaternion.identity);
 				numberOfFullyPeeled = numberOfFullyPeeled-1;
@@ -34,8 +25,20 @@ public class Spawner : MonoBehaviour
 				count = count+1;
 			}
 		}
-		countNum++;
+		countNum++;*/
 	}
+
+    IEnumerator SpawnPotatoes()
+    {
+        foreach (GameObject obj in peeled)
+        {
+            Instantiate(obj, new Vector3(0, 10, 0), Quaternion.identity);
+            count++;
+
+            yield return new WaitForSeconds(0.5f);
+        }
+    }
+
 	void OnGUI()
 	{
 		GUIStyle nStyle = new GUIStyle ();
@@ -47,5 +50,7 @@ public class Spawner : MonoBehaviour
 		GUI.TextField (new Rect (Screen.width/2-50, 10, 200, 200), "Peeled potato : ", nStyle);
 		nStyle.fontSize = 200;
 		GUI.TextField (new Rect (Screen.width/2-50, 320, 200, 200), "" + count, nStyle);
-	}	
+	}
+
+    
 }

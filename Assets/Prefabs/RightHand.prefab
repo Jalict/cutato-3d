@@ -70,14 +70,14 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 116190}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 2
   m_Drag: 0
   m_AngularDrag: .0500000007
   m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!65 &6502700
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -102,7 +102,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   peelSound: {fileID: 8300000, guid: 81e500315f53a5d4e9fd4540ae21086d, type: 3}
-  peelingEffect: {fileID: 0}
   PeelingLocation: {x: 0, y: 0, z: 3}
   PeelingRadius: .5
 --- !u!1001 &100100000

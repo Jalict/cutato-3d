@@ -6,13 +6,13 @@ public class MainGameManager : MonoBehaviour {
 	public static MainGameManager instance;
 	public int score;
 	public ArrayList peeledPotatoes = new ArrayList();
-	public float timeRemaining = 60; 
+	public float timeRemaining = 60;
 	private IEnumerator countdown;
 	private bool isCountingDown;
 	public delegate void timeoutEvent();
 	public static event timeoutEvent timeout;
 
-	void Awake(){
+	void Awake() {
 		if(instance) {
 			DestroyImmediate(gameObject);
 		} else {
@@ -21,8 +21,6 @@ public class MainGameManager : MonoBehaviour {
 		}
 		countdown = CountdownTime();
 		isCountingDown = false;
-
-		StartTimer ();
 	}
 
 	public void AdjustScore(int i){
@@ -44,7 +42,6 @@ public class MainGameManager : MonoBehaviour {
 	}
 
 	private IEnumerator CountdownTime(){
-
 		while (timeRemaining > 0) {
 			timeRemaining = timeRemaining - Time.fixedDeltaTime;
 			//Debug.Log("Time remaining: " + timeRemaining);
