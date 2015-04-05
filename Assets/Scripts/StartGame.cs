@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class StartGame : MonoBehaviour {
-	//public AudioClip potSound;
+	public AudioClip potSound;
 	//GUI
 	public Font newFont;
 	private int fontSize;
@@ -19,6 +19,7 @@ public class StartGame : MonoBehaviour {
 	IEnumerator WaitAndShiftScene()
 	{
 		Debug.Log("Collision");
+        AudioSource.PlayClipAtPoint(potSound, transform.position);
 		// suspend execution for 4 seconds
 		yield return new WaitForSeconds(4);
 		Application.LoadLevel (1);
