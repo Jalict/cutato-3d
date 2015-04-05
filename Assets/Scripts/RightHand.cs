@@ -14,6 +14,9 @@ public class RightHand : MonoBehaviour {
 	}
 
 	void Update () {
+        if(Input.GetKeyDown(KeyCode.L))
+            transform.position = new Vector3(4.7f, 3.3f, -2.4f);
+
 		MoveHand ();
 
         if (Input.GetKey(KeyCode.Mouse0) && isPeeling) { 

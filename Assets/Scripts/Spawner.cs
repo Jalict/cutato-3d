@@ -11,6 +11,13 @@ public class Spawner : MonoBehaviour
 	private int count = 0;
 
 	void Awake() {
+        foreach (GameObject obj in MainGameManager.instance.peeledPotatoes)
+        {
+            obj.SetActive(false);
+            obj.transform.position = new Vector3(1000, 1000, 1000);
+            Instantiate(obj, new Vector3(0, 10, 0), Quaternion.identity);
+        }
+
         StartCoroutine(SpawnPotatoes());
  	}
 
@@ -29,6 +36,7 @@ public class Spawner : MonoBehaviour
 
     IEnumerator SpawnPotatoes() {
         foreach(GameObject obj in MainGameManager.instance.peeledPotatoes) {
+            obj.SetActive(true);
             Instantiate(obj, new Vector3(0, 10, 0), Quaternion.identity);
 			AudioSource.PlayClipAtPoint(ding, transform.position, 1.0f);
             count++;

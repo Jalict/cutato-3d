@@ -11,6 +11,9 @@ public class LeftHand : MonoBehaviour {
 	}
 
 	void Update () {
+        if (Input.GetKeyDown(KeyCode.L))
+            transform.position = new Vector3(-0.1f, 5, -4.33f);
+
 		MoveHand ();
 
 		if (Input.GetKeyDown (KeyCode.Space)) {
@@ -52,16 +55,19 @@ public class LeftHand : MonoBehaviour {
 	void MoveHand() {
 		Vector3 nextPos = transform.position;
 
-		if (Input.GetKey (KeyCode.A)) {
+		if (Input.GetKey (KeyCode.A) && transform.position.x > -12f) {
 			nextPos.x -= Time.deltaTime * 10;
 		}
-		if (Input.GetKey (KeyCode.D)) {
+        if (Input.GetKey(KeyCode.D) && transform.position.x < 16f)
+        {
 			nextPos.x += Time.deltaTime * 10;
 		}
-		if (Input.GetKey (KeyCode.S)) {
+        if (Input.GetKey(KeyCode.S) && transform.position.z > -8f)
+        {
 			nextPos.z -= Time.deltaTime * 10;
 		}
-		if (Input.GetKey (KeyCode.W)) {
+        if (Input.GetKey(KeyCode.W) && transform.position.z < 5f)
+        {
 			nextPos.z += Time.deltaTime * 10;
 		}
 		if (Input.GetKey (KeyCode.Q)) {
