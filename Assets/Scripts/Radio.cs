@@ -10,7 +10,7 @@ public class Radio : MonoBehaviour {
 
         if (velocity >= 1f)
         {
-            AudioSource.PlayClipAtPoint(audioGlitch, transform.position);
+            //AudioSource.PlayClipAtPoint(audioGlitch, transform.position);
         }
     }
 }

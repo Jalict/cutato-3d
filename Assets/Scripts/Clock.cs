@@ -18,7 +18,7 @@ public class Clock : MonoBehaviour {
 
         MainGameManager.instance.StartTimer();
 
-        StartCoroutine("TickTock");
+        StartCoroutine(TickTock());
     }
 
     void OnEnable()
@@ -50,11 +50,11 @@ public class Clock : MonoBehaviour {
 
     public IEnumerator TickTock()
     {
-        while (isMoving)
+        while (true)
         {
             float secondAngle = (MainGameManager.instance.timeRemaining) * (360 / 60);
             SecondHand.localRotation = Quaternion.Euler(0, 0, secondAngle);
-            Debug.Log(MainGameManager.instance.timeRemaining);
+
             yield return new WaitForSeconds(1);
         }
     }

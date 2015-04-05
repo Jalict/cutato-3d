@@ -22,8 +22,11 @@ public class BucketList : MonoBehaviour {
 		foreach (Collider obj in collidedObjects) {
 			
 			if(obj.CompareTag("Peelable")) {
-                MainGameManager.instance.peeledPotatoes.Add(obj);
-				obj.tag = "Untagged";
+                if (obj.gameObject.GetComponent<Peelable>().isPeeled()) { //TODO SHIT DOES NOT WORK DOE??
+                    MainGameManager.instance.peeledPotatoes.Add(obj.gameObject);
+			        obj.tag = "Untagged";
+                    obj.GetComponent<Peelable>().DontKillMe();
+                }
 			}
 		}
 	}

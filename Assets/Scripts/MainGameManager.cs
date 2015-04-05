@@ -1,11 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class MainGameManager : MonoBehaviour {
 
 	public static MainGameManager instance;
-	public int score;
-	public ArrayList peeledPotatoes = new ArrayList();
+	public List<GameObject> peeledPotatoes;
 	public float timeRemaining = 60;
 	private IEnumerator countdown;
 	private bool isCountingDown;
@@ -19,14 +19,11 @@ public class MainGameManager : MonoBehaviour {
 			instance = this;
 			DontDestroyOnLoad(gameObject);
 		}
+
+        peeledPotatoes = new List<GameObject>();
+
 		countdown = CountdownTime();
 		isCountingDown = false;
-	}
-
-	public void AdjustScore(int i){
-
-		score = score + i;
-		Debug.Log ("Score has been adjusted to: " + score);
 	}
 
 	public void StartTimer(){

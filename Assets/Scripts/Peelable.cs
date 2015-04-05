@@ -44,7 +44,7 @@ public class Peelable : MonoBehaviour {
     {
         if (!isPeeled())
         {
-            amountOfSkinLeft -= 1f * Time.deltaTime;
+            amountOfSkinLeft -= 3f * Time.deltaTime;
 
             StartCoroutine("StartPeelingEmitter");
         }
@@ -57,5 +57,10 @@ public class Peelable : MonoBehaviour {
         yield return new WaitForSeconds(2);
 
         GetComponent<ParticleSystem>().Stop();
+    }
+
+    public void DontKillMe()
+    {
+        DontDestroyOnLoad(this);
     }
 }
