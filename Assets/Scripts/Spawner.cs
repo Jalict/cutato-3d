@@ -1,18 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Spawner : MonoBehaviour 
 {
     public Font newFont;
 
-	ArrayList peeled; //storing data from GameManager.
 	//showing highscore/number of peeled potatos.
 	private int count = 0;
 
 	void Start() {
-		peeled = MainGameManager.instance.peeledPotatoes;
-
-        StartCoroutine("SpawnPotatoes");
+        StartCoroutine(SpawnPotatoes());
  	}
 
 	void Update()
@@ -28,11 +26,9 @@ public class Spawner : MonoBehaviour
 		countNum++;*/
 	}
 
-    IEnumerator SpawnPotatoes()
-    {
-        foreach (GameObject obj in peeled)
-        {
-            Instantiate(obj, new Vector3(0, 10, 0), Quaternion.identity);
+    IEnumerator SpawnPotatoes() {
+        foreach(GameObject obj in MainGameManager.instance.peeledPotatoes) {
+            obj.transform.position = new Vector3(0, 10, 0);
             count++;
 
             yield return new WaitForSeconds(0.5f);

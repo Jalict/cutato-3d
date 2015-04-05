@@ -43,7 +43,6 @@ public class ThrowBucket : MonoBehaviour {
 
 		while (MainGameManager.instance.timeRemaining > 0) {
 			if(MainGameManager.instance.timeRemaining < nextThrow){
-				Debug.Log("THROW THE POTATOES!");
 				StartCoroutine("ThrowPotatoes");
 				nextThrow = nextThrow - interval;
 			}
