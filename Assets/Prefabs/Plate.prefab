@@ -12,8 +12,9 @@ GameObject:
   - 23: {fileID: 2347770}
   - 54: {fileID: 5416226}
   - 64: {fileID: 6488012}
+  - 114: {fileID: 11412356}
   m_Layer: 0
-  m_Name: Plate
+  m_Name: plate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -89,6 +90,18 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 59512fd1a404fee47a0f1f2074ac9cd7, type: 3}
+--- !u!114 &11412356
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 119284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c46a058d2a8d1c64ba903e6d9a506e5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionSound: {fileID: 8300000, guid: 9c6f15d1432b5ac4c9fc6156e65220ee, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

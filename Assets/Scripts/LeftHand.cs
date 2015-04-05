@@ -22,8 +22,6 @@ public class LeftHand : MonoBehaviour {
 			}
 		}
 		if (grabbedObject != null) {
-			//TODO Make such that the object doesn't rotate all over the place
-			//TODO Make such that objects gabbing position is also specified
 			grabbedObject.transform.position = grabbingLocation + transform.position;
             grabbedObject.GetComponent<Rigidbody>().isKinematic = true;
 		} 

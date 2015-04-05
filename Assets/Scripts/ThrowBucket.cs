@@ -27,8 +27,9 @@ public class ThrowBucket : MonoBehaviour {
 		}
 
 		for (int i = 0; i < numPotatoes; i++) {
-			Instantiate(potatoes[Random.Range(0, potatoes.Length)], transform.position, Quaternion.identity);
-			yield return new WaitForFixedUpdate();
+			GameObject potato = (GameObject) Instantiate(potatoes[Random.Range(0, potatoes.Length)], transform.position, Quaternion.identity);
+            potato.GetComponent<Renderer>().material.SetTextureScale("_MainTex", new Vector2(1.5f, 1.5f));
+            yield return new WaitForFixedUpdate();
 		}
 		
 		while (Vector3.Distance(transform.position, startPos) > 1.0f) {

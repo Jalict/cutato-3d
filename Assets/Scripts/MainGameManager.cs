@@ -12,19 +12,30 @@ public class MainGameManager : MonoBehaviour {
 	public delegate void timeoutEvent();
 	public static event timeoutEvent timeout;
 
-	void Awake() {
-		if(instance) {
-			DestroyImmediate(gameObject);
-		} else {
-			instance = this;
-			DontDestroyOnLoad(gameObject);
-		}
+    void Start()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+
+
+    void Awake()
+    {
+        if (instance)
+        {
+            DestroyImmediate(gameObject);
+        }
+        else
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
 
         peeledPotatoes = new List<GameObject>();
 
-		countdown = CountdownTime();
-		isCountingDown = false;
-	}
+        countdown = CountdownTime();
+        isCountingDown = false;
+    }
 
 	public void StartTimer(){
 		if (!isCountingDown) {
