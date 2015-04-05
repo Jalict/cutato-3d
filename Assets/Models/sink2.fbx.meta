@@ -1,0 +1,115 @@
+fileFormatVersion: 2
+guid: 1396f08d5d8d012498f01eaa925639b7
+timeCreated: 1428232855
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: sink_mesh
+    400000: //RootNode
+    400002: sink_mesh
+    2300000: sink_mesh
+    3300000: sink_mesh
+    4300000: sink_mesh
+    7400000: sink|potato10:Mesh|Take 001|BaseLayer
+    7400002: sink|potato1:Mesh|potato1:Mesh|potato1:Mesh|Take 001|BaseLayer|potat
+    7400004: sink|potato1:Mesh|potato1:Mesh|potato2:Mesh|Take 001|BaseLayer|potat
+    7400006: sink|potato1:Mesh|Take 001|BaseLayer
+    7400008: sink|potato2:Mesh|Take 001|BaseLayer
+    7400010: sink|potato3:Mesh|Take 001|BaseLayer
+    7400012: sink|potato4:Mesh|Take 001|BaseLayer
+    7400014: sink|potato5:Mesh|Take 001|BaseLayer
+    7400016: sink|potato6:Mesh|Take 001|BaseLayer
+    7400018: sink|potato7:Mesh|potato7:Mesh|potato1:Mesh|potato1:Mesh|potato1:Mes
+    7400020: sink|potato7:Mesh|potato7:Mesh|potato1:Mesh|potato1:Mesh|potato2:Mes
+    7400022: sink|potato7:Mesh|potato7:Mesh|potato1:Mesh|Take 001|BaseLayer|potat
+    7400024: sink|potato7:Mesh|potato7:Mesh|potato2:Mesh|Take 001|BaseLayer|potat
+    7400026: sink|potato7:Mesh|potato7:Mesh|potato3:Mesh|Take 001|BaseLayer|potat
+    7400028: sink|potato7:Mesh|potato7:Mesh|potato4:Mesh|Take 001|BaseLayer|potat
+    7400030: sink|potato7:Mesh|potato7:Mesh|potato5:Mesh|Take 001|BaseLayer|potat
+    7400032: sink|potato7:Mesh|potato7:Mesh|potato6:Mesh|Take 001|BaseLayer|potat
+    7400034: sink|potato7:Mesh|potato7:Mesh|potato7:Mesh|Take 001|BaseLayer|potat
+    7400036: sink|potato7:Mesh|Take 001|BaseLayer
+    7400038: sink|potato8:Mesh|Take 001|BaseLayer
+    7400040: sink|potato9:Mesh|Take 001|BaseLayer
+    7400042: sink_mesh|potato10:Mesh|Take 001|BaseLayer
+    7400044: sink_mesh|potato1:Mesh|potato1:Mesh|potato1:Mesh|Take 001|BaseLayer|potat
+    7400046: sink_mesh|potato1:Mesh|potato1:Mesh|potato2:Mesh|Take 001|BaseLayer|potat
+    7400048: sink_mesh|potato1:Mesh|Take 001|BaseLayer
+    7400050: sink_mesh|potato2:Mesh|Take 001|BaseLayer
+    7400052: sink_mesh|potato3:Mesh|Take 001|BaseLayer
+    7400054: sink_mesh|potato4:Mesh|Take 001|BaseLayer
+    7400056: sink_mesh|potato5:Mesh|Take 001|BaseLayer
+    7400058: sink_mesh|potato6:Mesh|Take 001|BaseLayer
+    7400060: sink_mesh|potato7:Mesh|potato7:Mesh|potato1:Mesh|potato1:Mesh|potato1:Mes
+    7400062: sink_mesh|potato7:Mesh|potato7:Mesh|potato1:Mesh|potato1:Mesh|potato2:Mes
+    7400064: sink_mesh|potato7:Mesh|potato7:Mesh|potato1:Mesh|Take 001|BaseLayer|potat
+    7400066: sink_mesh|potato7:Mesh|potato7:Mesh|potato2:Mesh|Take 001|BaseLayer|potat
+    7400068: sink_mesh|potato7:Mesh|potato7:Mesh|potato3:Mesh|Take 001|BaseLayer|potat
+    7400070: sink_mesh|potato7:Mesh|potato7:Mesh|potato4:Mesh|Take 001|BaseLayer|potat
+    7400072: sink_mesh|potato7:Mesh|potato7:Mesh|potato5:Mesh|Take 001|BaseLayer|potat
+    7400074: sink_mesh|potato7:Mesh|potato7:Mesh|potato6:Mesh|Take 001|BaseLayer|potat
+    7400076: sink_mesh|potato7:Mesh|potato7:Mesh|potato7:Mesh|Take 001|BaseLayer|potat
+    7400078: sink_mesh|potato7:Mesh|Take 001|BaseLayer
+    7400080: sink_mesh|potato8:Mesh|Take 001|BaseLayer
+    7400082: sink_mesh|potato9:Mesh|Take 001|BaseLayer
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 5
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 87
+    splitTangentsAcrossUV: 1
+    normalImportMode: 1
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
