@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: d2197b67beef81f498cb269549290f0b
 timeCreated: 1428188503
+=======
+guid: 0588629ddb83e6b40b024f032a254ecf
+timeCreated: 1428191123
+>>>>>>> merge
 licenseType: Free
 NativeFormatImporter:
   userData: 
