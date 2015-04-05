@@ -5,6 +5,7 @@ using System.Collections.Generic;
 public class Spawner : MonoBehaviour 
 {
     public Font newFont;
+	public AudioClip ding;
 
 	//showing highscore/number of peeled potatos.
 	private int count = 0;
@@ -29,6 +30,7 @@ public class Spawner : MonoBehaviour
     IEnumerator SpawnPotatoes() {
         foreach(GameObject obj in MainGameManager.instance.peeledPotatoes) {
             obj.transform.position = new Vector3(0, 10, 0);
+			AudioSource.PlayClipAtPoint(ding, transform.position, 1.0f);
             count++;
 
             yield return new WaitForSeconds(0.5f);

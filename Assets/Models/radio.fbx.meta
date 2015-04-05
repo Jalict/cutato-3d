@@ -1,65 +1,15 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
-guid: fbb6dfa564d87b04898654c73cec4098
-timeCreated: 1428222055
-=======
-guid: 69554ce3ac0887c4d8fd18b93fa19ab5
-timeCreated: 1428221727
->>>>>>> cdb485d75dd78e57384970f1c22a25271bd511c7
+guid: e43065b111ff7c14795695300355c576
+timeCreated: 1428221462
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
   fileIDToRecycleName:
-    100000: joint24
-    100002: joint25
-    100004: joint26
-    100006: joint27
-    100008: joint28
-    100010: joint29
-    100012: joint30
-    100014: joint31
-    100016: joint32
-    100018: joint33
-    100020: joint34
-    100022: joint35
-    100024: joint36
-    100026: joint37
-    100028: joint38
-    100030: joint39
-    100032: joint40
-    100034: joint41
-    100036: joint42
-    100038: joint43
-    100040: joint44
-    100042: //RootNode
-    100044: pCube6
-    400000: joint24
-    400002: joint25
-    400004: joint26
-    400006: joint27
-    400008: joint28
-    400010: joint29
-    400012: joint30
-    400014: joint31
-    400016: joint32
-    400018: joint33
-    400020: joint34
-    400022: joint35
-    400024: joint36
-    400026: joint37
-    400028: joint38
-    400030: joint39
-    400032: joint40
-    400034: joint41
-    400036: joint42
-    400038: joint43
-    400040: joint44
-    400042: //RootNode
-    400044: pCube6
-    4300000: pCube6
-    7400000: Take 001
-    9500000: //RootNode
-    13700000: pCube6
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Cube.001
   materials:
     importMaterials: 1
     materialName: 0
@@ -79,11 +29,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-<<<<<<< HEAD
-    globalScale: 1
-=======
-    globalScale: 30
->>>>>>> cdb485d75dd78e57384970f1c22a25271bd511c7
+    globalScale: .699999988
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
@@ -117,7 +63,7 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   additionalBone: 0
   userData: 
   assetBundleName: 
