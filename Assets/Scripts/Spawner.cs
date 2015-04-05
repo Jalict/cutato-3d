@@ -10,7 +10,7 @@ public class Spawner : MonoBehaviour
 	//showing highscore/number of peeled potatos.
 	private int count = 0;
 
-	void Start() {
+	void Awake() {
         StartCoroutine(SpawnPotatoes());
  	}
 
@@ -29,7 +29,7 @@ public class Spawner : MonoBehaviour
 
     IEnumerator SpawnPotatoes() {
         foreach(GameObject obj in MainGameManager.instance.peeledPotatoes) {
-            obj.transform.position = new Vector3(0, 10, 0);
+            Instantiate(obj, new Vector3(0, 10, 0), Quaternion.identity);
 			AudioSource.PlayClipAtPoint(ding, transform.position, 1.0f);
             count++;
 

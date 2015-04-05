@@ -99,6 +99,6 @@ public class Clock : MonoBehaviour {
     {
         yield return new WaitForSeconds(4);
 
-        Application.LoadLevel(0);
+        Application.LoadLevel(2);
     }
 }

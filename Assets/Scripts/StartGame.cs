@@ -21,7 +21,7 @@ public class StartGame : MonoBehaviour {
 		Debug.Log("Collision");
 		// suspend execution for 4 seconds
 		yield return new WaitForSeconds(4);
-		Application.LoadLevel (2);
+		Application.LoadLevel (1);
 	}
 
 	void Update () {

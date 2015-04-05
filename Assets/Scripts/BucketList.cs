@@ -19,10 +19,10 @@ public class BucketList : MonoBehaviour {
 	{
 		Collider[] collidedObjects = Physics.OverlapSphere (PeelingLocation + transform.position, PeelingRadius);
 
-		foreach (Collider obj in collidedObjects) {
-			
+		foreach (Collider obj in collidedObjects) {	
 			if(obj.CompareTag("Peelable")) {
-                if (obj.gameObject.GetComponent<Peelable>().isPeeled()) { //TODO SHIT DOES NOT WORK DOE??
+                if (obj.gameObject.GetComponent<Peelable>().isPeeled()) {
+                    Debug.Log("ADDED POTATO TO LIST");
                     MainGameManager.instance.peeledPotatoes.Add(obj.gameObject);
 			        obj.tag = "Untagged";
                     obj.GetComponent<Peelable>().DontKillMe();

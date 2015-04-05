@@ -10,8 +10,6 @@ public class RightHand : MonoBehaviour {
     private bool isPeeling;
 
 	void Start () {
-		Cursor.lockState = CursorLockMode.Locked;
-
         isPeeling = false;
 	}
 
