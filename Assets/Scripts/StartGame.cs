@@ -7,30 +7,36 @@ public class StartGame : MonoBehaviour {
 	public Font newFont;
 	private int fontSize;
 
-	public GameObject potato;
-	float z;
+	public GameObject[] potato;
+	private float z;
 	private bool isShooted = false;
 	private bool isPotShot = false;
+	private bool isMoving;
 
 	void Start(){
-		
+		isMoving = true;
 	}
 	IEnumerator WaitAndShiftScene()
 	{
-			Debug.Log("Collision");
+		Debug.Log("Collision");
 		// suspend execution for 4 seconds
-			yield return new WaitForSeconds(4);
-			Application.LoadLevel (2);
+		yield return new WaitForSeconds(4);
+		Application.LoadLevel (2);
 	}
 
 	void Update () {
-		MovePotato();
-		transform.Translate (z, 0f, 0f);
-		if(Input.GetKeyDown(KeyCode.Mouse0)){
-			z =-50f * Time.deltaTime;
-			isShooted = true;
-			//Create a new object when other is shot away.
-			Instantiate(gameObject);
+		if(isMoving == true){
+			MovePotato();
+			transform.Translate (z, 0f, 0f);
+			if(Input.GetKeyDown(KeyCode.Mouse0)){
+				z =-50f * Time.deltaTime;
+				isShooted = true;
+				//Create a new object when other is shot away.
+				Instantiate(gameObject);
+				//GameObject [] potato = new GameObject [2];
+				//potato[1] = GameObject.Instantiate (Resources.Load ("potato")) as GameObject; 
+				//potato[1].transform.position = new Vector3( 0, 0, 0);
+			}
 		}
 	}
 
@@ -45,9 +51,10 @@ public class StartGame : MonoBehaviour {
 		}
 	}
 	void OnTriggerEnter(Collider other){
-		if (other.gameObject.tag == "Pot"){
-			StartCoroutine(WaitAndShiftScene());
-			isPotShot = true;
+		isMoving=false;
+			if (other.gameObject.tag == "Pot"){
+				StartCoroutine(WaitAndShiftScene());
+				isPotShot = true;
 			//AudioSource.PlayClipAtPoint(potSound, this.transform.position);
 		}
 	}

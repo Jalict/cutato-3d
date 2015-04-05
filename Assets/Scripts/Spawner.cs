@@ -39,12 +39,11 @@ public class Spawner : MonoBehaviour
 	{
 		GUIStyle nStyle = new GUIStyle ();
 		nStyle.font = newFont;
-		//nStyle.fontSize = 30;
-		nStyle.normal.textColor = new Color(100,100,100);
-		//GUI.TextField (new Rect (10, 50, 200, 200), "HIGHSCORE", nStyle);
 		nStyle.fontSize = 18;
-		GUI.TextField (new Rect (Screen.width/2-50, 10, 200, 200), "Peeled potato : ", nStyle);
+		nStyle.normal.textColor = new Color(0,0,0);
+		GUI.TextField (new Rect (Screen.width/2-50, 10, 200, 200), "Peeled potatos: ", nStyle);
 		nStyle.fontSize = 200;
+		nStyle.normal.textColor = new Color(100,100,100);
 		GUI.TextField (new Rect (Screen.width/2-50, 320, 200, 200), "" + count, nStyle);
 	}
 
