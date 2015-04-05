@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class StartGame : MonoBehaviour {
+	//public AudioClip potSound;
 	//GUI
 	public Font newFont;
 	private int fontSize;
@@ -9,13 +10,27 @@ public class StartGame : MonoBehaviour {
 	public GameObject potato;
 	float z;
 	private bool isShooted = false;
+	private bool isPotShot = false;
+
+	void Start(){
+		
+	}
+	IEnumerator WaitAndShiftScene()
+	{
+			Debug.Log("Collision");
+		// suspend execution for 4 seconds
+			yield return new WaitForSeconds(4);
+			Application.LoadLevel (2);
+	}
 
 	void Update () {
 		MovePotato();
 		transform.Translate (z, 0f, 0f);
-		if(Input.GetKey(KeyCode.Mouse0)){
+		if(Input.GetKeyDown(KeyCode.Mouse0)){
 			z =-50f * Time.deltaTime;
 			isShooted = true;
+			//Create a new object when other is shot away.
+			Instantiate(gameObject);
 		}
 	}
 
@@ -31,7 +46,9 @@ public class StartGame : MonoBehaviour {
 	}
 	void OnTriggerEnter(Collider other){
 		if (other.gameObject.tag == "Pot"){
-			Application.LoadLevel (2);
+			StartCoroutine(WaitAndShiftScene());
+			isPotShot = true;
+			//AudioSource.PlayClipAtPoint(potSound, this.transform.position);
 		}
 	}
 
@@ -41,6 +58,6 @@ public class StartGame : MonoBehaviour {
 		nStyle.font = newFont;
 		nStyle.normal.textColor = new Color(100,100,100);
 		nStyle.fontSize = 200;
-		GUI.TextField (new Rect (Screen.width/2-50, 320, 200, 200), "Cutato!", nStyle);
+		GUI.TextField (new Rect (0, 0, 200, 200), "Cutato!", nStyle);
 	}	
 }
