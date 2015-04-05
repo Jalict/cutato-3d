@@ -28,7 +28,7 @@ public class Spawner : MonoBehaviour
 
     IEnumerator SpawnPotatoes() {
         foreach(GameObject obj in MainGameManager.instance.peeledPotatoes) {
-            Instantiate(obj, new Vector3(0, 10, 0), Quaternion.identity);
+            obj.transform.position = new Vector3(0, 10, 0);
             count++;
 
             yield return new WaitForSeconds(0.5f);

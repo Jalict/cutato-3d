@@ -4,9 +4,13 @@ using System.Collections;
 public class Clock : MonoBehaviour {
 	public Transform SecondHand;
 
+    public AudioClip tickSound;
+    public AudioClip alarmSound;
+
     public float maxForce = 50;
     private Rigidbody rb;
     private bool isVibrating = false;
+    private bool isTicking = false;
     private IEnumerator vibrateObject;
 
     private bool isMoving;
@@ -18,6 +22,7 @@ public class Clock : MonoBehaviour {
 
         MainGameManager.instance.StartTimer();
 
+        isTicking = true;
         StartCoroutine(TickTock());
     }
 
@@ -35,6 +40,7 @@ public class Clock : MonoBehaviour {
     {
         isMoving = false;
         StopCoroutine("TickTock");
+        isTicking = false;
         StartVibrate();
         StartCoroutine("SwitchScene");
     }
@@ -50,10 +56,12 @@ public class Clock : MonoBehaviour {
 
     public IEnumerator TickTock()
     {
-        while (true)
+        while (isTicking)
         {
             float secondAngle = (MainGameManager.instance.timeRemaining) * (360 / 60);
             SecondHand.localRotation = Quaternion.Euler(0, 0, secondAngle);
+
+            AudioSource.PlayClipAtPoint(tickSound, transform.position);
 
             yield return new WaitForSeconds(1);
         }
@@ -64,7 +72,10 @@ public class Clock : MonoBehaviour {
         if (!isVibrating)
         {
             isVibrating = true;
+            StopCoroutine(TickTock());
             StartCoroutine(vibrateObject);
+
+            AudioSource.PlayClipAtPoint(alarmSound, transform.position);
         }
     }
 
